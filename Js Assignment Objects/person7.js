@@ -12,6 +12,13 @@
     Profession:"software engineer"
 };
 const text = JSON.parse(myperson);
+const obj = JSON.parse(text, function (key, value) {
+  if (key == "birth") {
+    return new Date(value);
+  } else {
+    return value;
+  }
+
 */
 
 function person(fname,lname,age,skills,dateofbirth,address,married,profession)
